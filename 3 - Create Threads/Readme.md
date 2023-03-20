@@ -1,0 +1,3 @@
+- Examples of things you can do with threads
+    - run tasks in a thread after a time interval
+    - check number of threads that are currently running

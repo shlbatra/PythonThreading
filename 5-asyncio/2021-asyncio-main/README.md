@@ -1,0 +1,24 @@
+# Asynchronous operations
+
+- Ex. retreiving data from db, web scraping, interacting with api
+- traditionally async and parallel methods use threads
+- app run -> launch process -> process is CPU and RAM allocate -> Within process, have 1 or more threads -> 
+- process seperate memory and thread share memory, wait for opns ex. I/O -> thread do other things 
+- Threads Issue
+    - share memory so get bugs where threads try to read/write same time leading to unpredictable behavior
+    - program harder to understand as diff threads interact with each other
+-  introduce overhead as part of system needs to manage threads
+- Alt to Threads - asynchronous programming
+    - relies on future / promise / delay / deferred
+    - describe sort of proxy for our object -> unknown and resolved in future
+    - becuase computation not yet completed
+    - syntax extension to help write code that uses them and not create yourself
+    - futures -> come from functional programming
+- library -> asyncio 
+    - async -> define methods as async to run them asynchroniously
+    - await -> wait for sync method to finish
+- Adding parallelism 
+    - waiting for devices to connect, no need to wait as independent devices
+    - gather -> allows to run things in parallel
+    - combine sequential and parallel opns 
+- handle streams, sub processes, queues, etc
